@@ -722,6 +722,82 @@ span.text-red {
 }
 
 @media screen and (max-width: 450px) {
+  /* Footer.module.css */
+.footerContainer {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: #d1d5db; /* text-gray-200 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  padding: 100px; /* sm:p-[100px] */
+}
+
+.innerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.sectionContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.section {
+  min-width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sectionTitle {
+  color: black !important;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.sectionItem {
+  color: black !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.sectionLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sectionText {
+  color: black !important;
+  font-size: 15px;
+  margin-left: 6px;
+  text-align: center !important;
+}
+
+.footerText {
+  color: black !important;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
   .hero-banner-image {
     top: 0 !important;
     width: 270px !important;
@@ -972,4 +1048,79 @@ span.text-red {
     width: 300px;
     margin: auto;
   }
+
+}
+/* Footer.module.css */
+.footerContainer {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: #d1d5db; /* text-gray-200 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+  padding: 100px; /* sm:p-[100px] */
+}
+
+.innerContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.sectionContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.section {
+  min-width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sectionTitle {
+  color: black !important;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.sectionItem {
+  color: black !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.sectionLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sectionText {
+  color: black !important;
+  font-size: 15px;
+  margin-left: 6px;
+}
+
+.footerText {
+  color: black !important;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  text-align: center;
 }
