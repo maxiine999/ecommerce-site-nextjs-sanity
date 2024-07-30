@@ -1,8 +1,10 @@
+
 html,
 body,
 * {
-  padding: 0;
+  
   margin: 0;
+    padding: 0;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -15,7 +17,8 @@ body,
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-  box-sizing: border-box;
+  box-sizing: border-box ;
+ 
 }
 
 ::-webkit-scrollbar {
@@ -28,7 +31,8 @@ a {
 }
 
 .main-container {
-  max-width: 1400px;
+  max-width: 100%;
+  
   margin: auto;
   width: 100%;
 }
@@ -86,8 +90,8 @@ span.text-red {
 }
 
 .logo {
-  
-  margin-right: 100px;
+  margin-bottom: 10px;
+  margin-right: 0px;
   color: #333;
   /* A darker gray for better contrast */
   font-size: 24px;
@@ -102,7 +106,7 @@ span.text-red {
 
 .cart-icon {
   font-size: 25px;
-
+  left: 0px;
   color: gray;
   cursor: pointer;
   position: relative;
@@ -742,9 +746,17 @@ span.text-red {
 }
 
 @media screen and (max-width: 450px) {
+  
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    margin: px 5px !important;
+    position: relative;
+  }
   .cart-icon {
-    right: 40px;
-    bottom: 1 px;
+    right:50px;
+    bottom: 3px;
     font-size: 25px;
     color: gray;
     cursor: pointer;
@@ -754,23 +766,25 @@ span.text-red {
     background-color: transparent;
   }
   .btn-signin {
-    width: 95px;
-     position: relative;
-     
+    width: 100px; /* Adjust the width to fit the text */
+    position: relative;
     right: 15px;
-    text-align: center;
-    padding: 4px 12px;
+    
+    
+    padding: 4px 10px;
     border-radius: 15px;
     border: none;
     font-size: 20px;
     text-transform: uppercase;
-    
     color: #645c5c;
     cursor: pointer;
     transform: scale(1, 1);
     transition: transform 0.5s ease;
     margin-bottom: 10px;
-  }
+    white-space: nowrap; /* Ensure the text stays in one line */
+    display: inline-block;
+}
+
   /* Footer.module.css */
 .footerContainer {
   width: 100%;
