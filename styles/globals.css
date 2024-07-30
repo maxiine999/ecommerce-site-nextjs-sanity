@@ -743,7 +743,7 @@ span.text-red {
 
 @media screen and (max-width: 450px) {
   .cart-icon {
-    right: 50px;
+    right: 38px;
     bottom: 4px;
     font-size: 25px;
     color: gray;
