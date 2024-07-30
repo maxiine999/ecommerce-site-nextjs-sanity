@@ -30,19 +30,10 @@ const FooterBanner = ({ footerBanner: { discount, desc, largeText1, largeText2, 
             <button type="button" onClick={handleClick}>{buttonText}</button>
           </Link>
         </div>
-<<<<<<< HEAD
         <img src={urlFor(image)} alt="product image" className='footer-banner-image' />
-=======
-        <img src={"/assets/img.png"}
-        className='footer-banner-image'/>
->>>>>>> ffcd60a0d7356a30b6217cfda4b0ffe87a7c4413
       </div>
     </div>
   );
 }
 
-<<<<<<< HEAD
 export default FooterBanner;
-=======
-export default FooterBanner
->>>>>>> ffcd60a0d7356a30b6217cfda4b0ffe87a7c4413
