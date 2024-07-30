@@ -9,8 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cashfreepayments/cashfree-js": "^1.0.5",
+    "@clerk/nextjs": "^5.2.8",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.52.2",
+    "axios": "^1.7.2",
+    "cashfree-pg": "^4.2.3",
     "next": "14.2.5",
     "next-sanity": "^9.4.2",
     "paytmchecksum": "^1.5.1",
