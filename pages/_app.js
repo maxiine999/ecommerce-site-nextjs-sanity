@@ -17,12 +17,6 @@ export default function App({ Component, pageProps }) {
       <StateContext>
         <Layout>
           <Toaster />
-          <SignedOut>
-            <CustomSignInButton/>
-          </SignedOut>
-          <SignedIn >
-            <UserButton />
-          </SignedIn>
             <Component {...pageProps} />
         </Layout>
       </StateContext>
