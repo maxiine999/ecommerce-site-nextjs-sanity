@@ -17,7 +17,6 @@ import CustomSignInButton from '@/components/CustomSignIn';  // Import the Custo
 const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
 
-  const { showCart, setShowCart, totalQuantities } = useStateContext();
 
   return (
     <div className='navbar-container'>
@@ -53,9 +52,6 @@ const Navbar = () => {
       {showCart && <Cart />}
     </div>
   );
-  );
 }
-
-export default Navbar;
 
 export default Navbar;
