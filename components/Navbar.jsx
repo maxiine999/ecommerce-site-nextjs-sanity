@@ -52,6 +52,7 @@ const Navbar = () => {
       {showCart && <Cart />}
     </div>
   );
+  
 }
 
 export default Navbar;
