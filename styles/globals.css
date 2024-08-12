@@ -1,8 +1,10 @@
+
 html,
 body,
 * {
-  padding: 0;
+  
   margin: 0;
+    padding: 0;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -15,7 +17,8 @@ body,
     Droid Sans,
     Helvetica Neue,
     sans-serif;
-  box-sizing: border-box;
+  box-sizing: border-box ;
+ 
 }
 
 ::-webkit-scrollbar {
@@ -28,7 +31,8 @@ a {
 }
 
 .main-container {
-  max-width: 1400px;
+  max-width: 100%;
+  
   margin: auto;
   width: 100%;
 }
@@ -42,6 +46,9 @@ a {
   justify-content: space-between;
   margin: 6px 18px;
   position: relative;
+}
+.navbar-left{
+  width: 120px;
 }
 
 .marquee-text {
@@ -86,7 +93,12 @@ span.text-red {
 }
 
 .logo {
-  color: #333;
+  /* position: absolute;
+  right: 43%; */
+  align-items: center;
+  margin-bottom: 10px;
+  
+  color: #463939;
   /* A darker gray for better contrast */
   font-size: 24px;
   /* Increased font size for better visibility */
@@ -97,9 +109,15 @@ span.text-red {
   letter-spacing: 1px;
   /* Improves readability */
 }
+.cart-div{
+  width:120px;
+  display:flex;
+  justify-content: right;
+}
 
 .cart-icon {
   font-size: 25px;
+  left: 0px;
   color: gray;
   cursor: pointer;
   position: relative;
@@ -204,8 +222,8 @@ span.text-red {
 
 .hero-banner-image {
   position: absolute;
-  top: 0%;
-  right: 30%;
+  top:0%;
+  right:30%;
   width: 400px;
   height: 500px;
 }
@@ -252,7 +270,7 @@ span.text-red {
 }
 
 .footer-banner-container {
-  padding: 100px 40px;
+  padding: 50px 40px;
   background-color: #f02d34;
   border-radius: 15px;
   position: relative;
@@ -481,17 +499,15 @@ span.text-red {
   transition: transform 0.5s ease;
 }
 .btn-signin {
-  width: 110px;
+  width: 120px;
   text-align: center;
   padding: 4px 12px;
   border-radius: 15px;
   border: none;
   font-size: 20px;
-  margin-top: 0px;
-  margin-top: 10px;
   text-transform: uppercase;
-  background-color: #000000;
-  color: #fff;
+  
+  color: #645c5c;
   cursor: pointer;
   transform: scale(1, 1);
   transition: transform 0.5s ease;
@@ -741,6 +757,48 @@ span.text-red {
 }
 
 @media screen and (max-width: 450px) {
+  
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+ .navbar-left{
+  width:70px;
+ }
+ .cart-div{
+  width:20px;
+ }
+  .cart-icon {
+    right:50px;
+    bottom: 3px;
+    font-size: 25px;
+    color: gray;
+    cursor: pointer;
+    
+    transition: transform 0.4s ease;
+    border: none;
+    background-color: transparent;
+  }
+  .btn-signin {
+    width: 90px; /* Adjust the width to fit the text */
+    position: relative;
+    right: 15px;
+    padding: 4px 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #645c5c;
+    cursor: pointer;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+    margin-bottom: 10px;
+    white-space: nowrap; /* Ensure the text stays in one line */
+    display: inline-block;
+}
+
   /* Footer.module.css */
 .footerContainer {
   width: 100%;
@@ -749,6 +807,20 @@ span.text-red {
   color: #d1d5db; /* text-gray-200 */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
   padding: 100px; /* sm:p-[100px] */
+}
+.logo {
+  
+  
+  color: #333;
+  /* A darker gray for better contrast */
+  font-size: 24px;
+  /* Increased font size for better visibility */
+  font-weight: bold;
+  /* Adds emphasis to the logo */
+  text-transform: uppercase;
+  /* For a professional look */
+  letter-spacing: 1px;
+  /* Improves readability */
 }
 
 .innerContainer {
@@ -882,6 +954,7 @@ span.text-red {
 }
 
 @media screen and (max-width: 800px) {
+ 
   .product-detail-image {
   border-radius: 15px;
   background-color: #ebebeb;
@@ -897,36 +970,38 @@ span.text-red {
   }
 
   .hero-banner-image {
-    width: 77%;
-    height: 62%;
-    top: -2%;
-    right: -6%;
+    width:300px;
+    height: 400px;
+    top: 0%;
+    right: 00%;
   }
 
   .footer-banner-container {
-    height: 560px;
+    height: 580px;
     margin-top: 80px;
   }
 
   .footer-banner-image {
-    width: 77%;
-    left: 30%;
-    top: 6%;
+    width: 300px;
     height: 56%;
-    
+    left: 30%;
+    top: 30%;
+  
   }
 
   .banner-desc .left h3 {
     font-weight: 900;
     font-size: 50px;
     margin-left: 5px;
+    z-index:3;
   }
-
+  
   .banner-desc .left p {
     margin: 18px;
   }
-
+  
   .banner-desc .right h3 {
+    z-index:3;
     font-size: 45px;
   }
 

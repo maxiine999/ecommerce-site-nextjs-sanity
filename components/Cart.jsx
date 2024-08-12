@@ -13,9 +13,13 @@ import { useStateContext } from "../context/StateContext";
 import { urlFor } from "../lib/client";
 import Image from "next/image";
 import { load } from "@cashfreepayments/cashfree-js";
+import { useUser } from "@clerk/clerk-react";
+import { useRouter } from "next/router";
 
 const Cart = () => {
+  const router = useRouter()
   const cartRef = useRef();
+  const { isSignedIn, user, isLoaded } = useUser();
   const {
     totalPrice,
     totalQuantities,
@@ -61,18 +65,30 @@ const Cart = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    try {
-      const sessionId = await getSessionId();
-      const checkoutOptions = {
-        paymentSessionId: sessionId,
-        redirectTarget: "_modal",
-      };
-      cashfree.checkout(checkoutOptions).then((res) => {
-        console.log("Payment initialized");
-        verifyPayment(orderId);
-      });
-    } catch (error) {
-      console.log(error);
+    console.log(isSignedIn);
+    
+    if (!isSignedIn) {
+      toast.error(`Please Login First`);
+      setTimeout(() => {
+        
+        router.reload()
+      }, 2000);
+    }
+    else{
+
+      try {
+        const sessionId = await getSessionId();
+        const checkoutOptions = {
+          paymentSessionId: sessionId,
+          redirectTarget: "_modal",
+        };
+        cashfree.checkout(checkoutOptions).then((res) => {
+          console.log("Payment initialized");
+          verifyPayment(orderId);
+        });
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
