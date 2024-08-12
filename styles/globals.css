@@ -1,9 +1,12 @@
 
+
 html,
 body,
 * {
   
+  
   margin: 0;
+    padding: 0;
     padding: 0;
   font-family:
     -apple-system,
@@ -19,6 +22,8 @@ body,
     sans-serif;
   box-sizing: border-box ;
  
+  box-sizing: border-box ;
+ 
 }
 
 ::-webkit-scrollbar {
@@ -31,6 +36,8 @@ a {
 }
 
 .main-container {
+  max-width: 100%;
+  
   max-width: 100%;
   
   margin: auto;
@@ -117,6 +124,7 @@ span.text-red {
 
 .cart-icon {
   font-size: 25px;
+  left: 0px;
   left: 0px;
   color: gray;
   cursor: pointer;
@@ -500,12 +508,15 @@ span.text-red {
 }
 .btn-signin {
   width: 120px;
+  width: 120px;
   text-align: center;
   padding: 4px 12px;
   border-radius: 15px;
   border: none;
   font-size: 20px;
   text-transform: uppercase;
+  
+  color: #645c5c;
   
   color: #645c5c;
   cursor: pointer;

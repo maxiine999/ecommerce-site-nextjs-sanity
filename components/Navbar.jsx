@@ -6,7 +6,17 @@ import { useStateContext } from '@/context/StateContext';
 import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';  // Import Clerk components
 import CustomSignInButton from '@/components/CustomSignIn';  // Import the CustomSignInButton
 
+import React from 'react';
+import Link from 'next/link';
+import { AiOutlineShopping } from 'react-icons/ai';
+import Cart from './Cart';
+import { useStateContext } from '@/context/StateContext';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';  // Import Clerk components
+import CustomSignInButton from '@/components/CustomSignIn';  // Import the CustomSignInButton
+
 const Navbar = () => {
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
+
   const { showCart, setShowCart, totalQuantities } = useStateContext();
 
   return (
@@ -19,7 +29,16 @@ const Navbar = () => {
           <UserButton />  {/* User Button for Signed In users */}
         </SignedIn>
       </div>
+      <div className='navbar-left'>
+        <SignedOut>
+          <CustomSignInButton />  {/* Sign-In Button for Signed Out users */}
+        </SignedOut>
+        <SignedIn>
+          <UserButton />  {/* User Button for Signed In users */}
+        </SignedIn>
+      </div>
       <p className='logo'>
+        <Link href="/">AttireAvenue</Link>
         <Link href="/">AttireAvenue</Link>
       </p> 
       <div className='cart-div'>
@@ -34,6 +53,9 @@ const Navbar = () => {
       {showCart && <Cart />}
     </div>
   );
+  );
 }
+
+export default Navbar;
 
 export default Navbar;
