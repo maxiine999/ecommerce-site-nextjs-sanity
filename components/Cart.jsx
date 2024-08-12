@@ -14,7 +14,7 @@ import { urlFor } from "../lib/client";
 import Image from "next/image";
 import { load } from "@cashfreepayments/cashfree-js";
 import { useUser } from "@clerk/clerk-react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const Cart = () => {
   const router = useRouter()
@@ -71,7 +71,7 @@ const Cart = () => {
       toast.error(`Please Login First`);
       setTimeout(() => {
         
-        router.reload()
+        router.push('https://learning-titmouse-62.accounts.dev/sign-in?')
       }, 2000);
     }
     else{
