@@ -177,7 +177,7 @@ const Cart = () => {
             </div>
             <div className="btn-container">
               <button type="button" className="btn" onClick={handleClick}>
-                Pay with Cashfree
+                Proceed to checkout
               </button>{" "}
             </div>
           </div>
